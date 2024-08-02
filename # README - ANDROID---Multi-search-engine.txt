@@ -126,8 +126,47 @@ Build and Run: Connect your Android device or start an emulator, then build and 
 Test: Ensure the app functions as expected, allowing you to select a search engine, enter a query, and perform the search.
 That's it! You've created a simple Android app that lets you select from multiple search engines and perform a search. Happy coding! 😊📱✨🔍
 
+show the full activity_main.xml
+ChatGPT
+Sure! Here is the complete activity_main.xml file, including the Spinner, EditText, and Button. This layout file defines the user interface for your app.
 
+xml
+Copy code
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
 
+    <Spinner
+        android:id="@+id/searchEngineSpinner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp" />
 
+    <EditText
+        android:id="@+id/queryEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter your search query"
+        android:layout_below="@id/searchEngineSpinner"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"/>
 
+    <Button
+        android:id="@+id/searchButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Search"
+        android:layout_below="@id/queryEditText"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp" />
+</RelativeLayout>
+This XML file sets up the layout with:
 
+A Spinner for selecting the search engine.
+An EditText for entering the search query.
+A Button to trigger the search action.
+This layout will provide a straightforward user interface for your app. Users can select their preferred search engine, input their query, and initiate the search with the press of a button. 😊📱🔍✨
